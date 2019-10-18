@@ -173,3 +173,5 @@ C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Debug\netcoreapp3.0\Ra
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.BrowserLink.dll
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Debug\netcoreapp3.0\GlucoSmart.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Debug\netcoreapp3.0\GlucoSmart.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Debug\netcoreapp3.0\Razor\Pages\Contact.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Debug\netcoreapp3.0\Razor\Pages\About.cshtml.g.cs

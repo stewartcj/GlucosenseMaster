@@ -34,7 +34,8 @@ namespace GlucoSmart
             services.AddIdentity<IdentityUser, IdentityRole>()
         
             //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
             services.AddRazorPages();
             services.AddMvc();
 
