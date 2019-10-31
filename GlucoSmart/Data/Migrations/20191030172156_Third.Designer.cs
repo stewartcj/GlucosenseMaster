@@ -4,14 +4,16 @@ using GlucoSmart.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GlucoSmart.Data.Migrations
 {
     [DbContext(typeof(GlucoSmartDb))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191030172156_Third")]
+    partial class Third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

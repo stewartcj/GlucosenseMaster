@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using GlucoSmart.Models;
+using GlucoSmart.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -24,15 +25,18 @@ namespace GlucoSmart.Areas.Identity.Pages.Account
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly DbApplicationUserRepository _userRepository;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
+            DbApplicationUserRepository userRepository,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _userRepository = userRepository;
             _logger = logger;
             _emailSender = emailSender;
         }
@@ -50,22 +54,19 @@ namespace GlucoSmart.Areas.Identity.Pages.Account
         }
 
         public class InputModel
-        {
+        {      
+            [Required]
+            [Display(Name = "Phone Number")]
+            [DataType(DataType.PhoneNumber)]
+            public string PhoneNumber { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
-            
-            [Required]
-            [Display(Name = "Username")]
-            public  string UserName { get; set; }
-
-            [Display(Name = "DoctorID (For Patients Only)")]
-            public string DoctorID { get; set; }
 
             [Required]
             [Display(Name = "Role")]
-            [DataType(DataType.Text)]
             public Roles Role { get; set; }
 
             [Required]
@@ -78,6 +79,28 @@ namespace GlucoSmart.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required]
+            [Display(Name = "First Name")]
+            [StringLength(50)]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Last Name")]
+            [StringLength(50)]
+            public string LastName { get; set; }
+
+            [Required]
+            [Display(Name = "Date of Birth")]
+            [DataType(DataType.Date)]
+            public DateTime DOB { get; set; }
+
+            [Display(Name = "DoctorID")]
+            public string DoctorID { get; set; }
+
+            [Required]
+            [Display(Name = "Username")]
+            public string Username { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -92,11 +115,14 @@ namespace GlucoSmart.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser { UserName = Input.Username, Email = Input.Email, DOB = Input.DOB, DoctorID = Input.DoctorID, FirstName = Input.FirstName, LastName = Input.LastName, PhoneNumber = Input.PhoneNumber  };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    await _userRepository.AssignUserToRoleAsync(Input.Username, Input.Role.ToString());
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

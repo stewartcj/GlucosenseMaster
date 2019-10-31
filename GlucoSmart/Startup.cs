@@ -31,11 +31,12 @@ namespace GlucoSmart
             services.AddDbContext<GlucoSmartDb>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddUserManager<UserManager<ApplicationUser>>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<GlucoSmartDb>();
             services.AddRazorPages();
+            services.AddScoped<DbApplicationUserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

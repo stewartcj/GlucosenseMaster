@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cman5\\Desktop\\GlucoSmart\\GlucoSmart.csproj": {}
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cman5\\Desktop\\GlucoSmart\\GlucoSmart.csproj": {
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cman5\\Desktop\\GlucoSmart\\GlucoSmart.csproj",
+        "projectUniqueName": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj",
         "projectName": "GlucoSmart",
-        "projectPath": "C:\\Users\\cman5\\Desktop\\GlucoSmart\\GlucoSmart.csproj",
+        "projectPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj",
         "packagesPath": "C:\\Users\\cman5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cman5\\Desktop\\GlucoSmart\\obj\\",
+        "outputPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
