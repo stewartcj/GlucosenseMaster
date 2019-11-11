@@ -13,7 +13,8 @@ namespace GlucoSmart.Models
     {
         [NotMapped]
         public ICollection<string> Roles { get; set; }
-       
+        
+           
         [Required]
         [Display(Name = "First Name")]
         [StringLength(50)]
