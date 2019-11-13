@@ -25,7 +25,15 @@
                 <label asp-for="Role"></label>
                 <input asp-for="Role" class="form-control" disabled />
             </div>
-            @if (User.IsInRole("Patient"))
+            @if (User.IsInRole("Patient") && Model.Doctor == "No Doctor Assigned")
+            {
+        <div class="form-group">
+            <label asp-for="Input.DoctorId"></label>
+            <input asp-for="Input.DoctorId" class="form-control" />
+            <span asp-validation-for="Input.DoctorId" class="text-danger"></span>
+        </div>
+            }
+            @if (User.IsInRole("Patient") && Model.Doctor != "No Doctor Assigned")
             {
                 <div class="form-group">
                     <label asp-for="Doctor"></label>

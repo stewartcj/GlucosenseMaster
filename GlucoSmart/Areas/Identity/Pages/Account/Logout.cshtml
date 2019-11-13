@@ -6,5 +6,10 @@
 
 <header>
     <h1>@ViewData["Title"]</h1>
-    <p>You have successfully logged out of the application.</p>
+    <p>You will be redirected to home page in 3 seconds</p>
+    <script>
+         var timer = setTimeout(function() {
+            window.location="/Index"
+        }, 3000);
+    </script>
 </header>
