@@ -34,6 +34,10 @@ namespace GlucoSmart.Pages
                 {
                     return LocalRedirect("~/Patients/Index");
                 }
+                else if(roles[0] == "Patient")
+                {
+                    return LocalRedirect("~/Entries/Glucose/Index");
+                }
                 else
                 {
                     return Page();

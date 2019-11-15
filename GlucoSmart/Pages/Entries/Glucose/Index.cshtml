@@ -2,23 +2,26 @@
 @model GlucoSmart.Pages.Entries.Glucose.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Glucose Readings";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Glucose Readings</h1>
 
 <table>
     <tr>
         <td>
-            <a asp-page="Create">Create New</a> | 
+
             @if (User.IsInRole("Doctor"))
             {
-            <a href="/Entries/Charts/GlucoseChart?username=@Model.Username">View Chart</a> 
+                <a href="/Entries/Charts/GlucoseChart?username=@Model.Username">View Chart</a>
             }
             @if (User.IsInRole("Patient"))
             {
-            <a href="/Entries/Charts/GlucoseChart">View Chart</a>
+                <p>
+                    <a asp-page="Create">Create New</a> | 
+                    <a href="/Entries/Charts/GlucoseChart">View Chart</a>
+                    </p>
             }
         </td>
     </tr>

@@ -37,7 +37,7 @@ namespace GlucoSmart.Pages.Entries.Glucose
             Entries = _context.GlucoseEntry.ToList();
             foreach(GlucoseEntry entry in Entries)
             {
-                if (User.IsInRole("Patients"))
+                if (User.IsInRole("Patient"))
                 {
                     if (entry.Username == User.Identity.Name)
                     {
