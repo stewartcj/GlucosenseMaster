@@ -64,6 +64,7 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\FoodEntry.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="RegisterActivity.cs" />
@@ -120,6 +121,9 @@
     <AndroidResource Include="Resources\layout\register_activity.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\food_activity.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
