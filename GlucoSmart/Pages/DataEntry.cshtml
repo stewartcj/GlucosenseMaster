@@ -1,0 +1,44 @@
+﻿@page
+@model GlucoSmart.Pages.DataEntryModel
+@{
+    ViewData["Title"] = "DataEntry";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Log</h1>
+<br />
+<h2>Glucose Entry</h2>
+<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<br />
+
+<h2>Food Entry</h2>
+<div class="col-md-4">
+    <form>
+        <fieldset>
+            <h4>Food Type</h4>
+            <select class="form-control" id='firstList' name='firstList' onClick="getFoodItem()">
+            </select>
+
+            <h4>Food Item</h4>
+            <select class="form-control" id='secondList' name='secondList'>
+            </select>
+        </fieldset>
+    </form>
+</div>
+<br />
+
+<h2>Activity Entry</h2>
+<form>
+    <fieldset>
+        <input type="radio" name="activityEntry" value="light" checked> Light<br>
+        <input type="radio" name="activityEntry" value="moderate"> Moderate<br>
+        <input type="radio" name="activityEntry" value="heavy"> Heavy
+    </fieldset>
+</form>
+
+@section Scripts {
+    <script type="text/javascript" src="slider.js"></script>
+}
+

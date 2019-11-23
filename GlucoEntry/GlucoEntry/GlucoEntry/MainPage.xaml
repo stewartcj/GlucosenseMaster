@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoEntry.MainPage">
+
+    <StackLayout>
+        <Label Text="Enter glucose reading" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label HorizontalOptions="Center"   Text="{Binding Source={x:Reference _stepper}, Path=Value}" FontSize="11"
+                                       TextColor="Black" />
+        <Stepper x:Name="_stepper"
+                 Value="{Binding Qty}"
+                 Maximum="150"
+                 Minimum="40"
+                 Increment="1"
+                 HorizontalOptions="Center" />
+        <Button Text="Submit" Clicked="GlucoseEntered" /> <!--use this method in the C# page to put it in the database?-->
+    </StackLayout>
+
+</ContentPage>

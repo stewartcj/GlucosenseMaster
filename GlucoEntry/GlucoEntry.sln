@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlucoEntry.Android", "GlucoEntry\GlucoEntry.Android\GlucoEntry.Android.csproj", "{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlucoEntry", "GlucoEntry\GlucoEntry\GlucoEntry.csproj", "{633DACA2-026C-4491-8E9B-D7F805A95C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B061EE-76AE-46E1-BA3F-FD2FDAFC24C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633DACA2-026C-4491-8E9B-D7F805A95C22}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1253ADD-BD6C-4546-AAF2-A0F47C90A35F}
+	EndGlobalSection
+EndGlobal
