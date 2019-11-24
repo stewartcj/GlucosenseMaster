@@ -114,7 +114,7 @@ namespace GlucoSmart.Areas.Identity.Pages.Account.Manage
 
                 
             }
-            if (Doctor == "No Doctor Assigned")
+            if (user.DoctorID == "No Doctor Assigned")
             {
                 user.DoctorID = Input.DoctorId;
                 var setDoctorResult = await _userManager.UpdateAsync(user);
