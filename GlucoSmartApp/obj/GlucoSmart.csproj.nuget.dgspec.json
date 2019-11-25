@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\GlucoSmart.csproj": {}
   },
   "projects": {
@@ -12,13 +13,26 @@
         "projectPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\GlucoSmart.csproj",
         "packagesPath": "C:\\Users\\cman5\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\obj\\",
+=======
+    "C:\\Users\\keebo\\Documents\\GitHub\\GlucosenseMaster\\GlucoSmartApp\\GlucoSmart.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\keebo\\Documents\\GitHub\\GlucosenseMaster\\GlucoSmartApp\\GlucoSmart.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\keebo\\Documents\\GitHub\\GlucosenseMaster\\GlucoSmartApp\\GlucoSmart.csproj",
+        "projectName": "GlucoSmart",
+        "projectPath": "C:\\Users\\keebo\\Documents\\GitHub\\GlucosenseMaster\\GlucoSmartApp\\GlucoSmart.csproj",
+        "packagesPath": "C:\\Users\\keebo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\keebo\\Documents\\GitHub\\GlucosenseMaster\\GlucoSmartApp\\obj\\",
+>>>>>>> 60e999af5f6aaf87999459d186dc3cf5706f655f
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\cman5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\keebo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

@@ -1,0 +1,70 @@
+﻿@page
+@model GlucoSmart.Pages.Entries.Exercise.IndexModel
+
+@{
+    ViewData["Title"] = "Exercise";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table>
+    <tr>
+        <td>
+
+            @if (User.IsInRole("Doctor"))
+            {
+                <a href="/Entries/Charts/ExerciseChart?username=@Model.Username">View Chart</a>
+            }
+            @if (User.IsInRole("Patient"))
+            {
+                <p>
+                    <a asp-page="Create">Create New</a> |
+                    <a href="/Entries/Charts/ExerciseChart">View Chart</a>
+                </p>
+            }
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExerciseEntry[0].Minutes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExerciseEntry[0].Exercise)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExerciseEntry[0].Intensity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExerciseEntry[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ExerciseEntry) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Minutes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exercise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intensity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

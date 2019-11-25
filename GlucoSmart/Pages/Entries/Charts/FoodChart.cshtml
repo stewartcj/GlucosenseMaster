@@ -1,0 +1,74 @@
+﻿@page
+@model GlucoSmart.Pages.Entries.Charts.FoodChartModel
+@{
+    ViewData["Title"] = "Food Chart";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Food Chart</h1>
+<body>
+    @if (User.IsInRole("Doctor"))
+    {
+        <a href="/Entries/Food/Index?username=@Model.Username">View As Table</a>
+    }
+    @if (User.IsInRole("Patient"))
+    {
+        <a href="/Entries/Food/Index">View As Table</a>
+    }
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-10">
+                <canvas id="foodChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/mdb.min.js"></script>
+
+    <script>
+        var ctxL = document.getElementById("foodChart").getContext("2d");
+        var gradientFill = ctxL.createLinearGradient(0, 0, 0, 290)
+        gradientFill.addColorStop(0, "rgba(173, 53, 186, 1)");
+        gradientFill.addColorStop(1, "rgba(173, 53, 186, 0.1)");
+        var carbs, calories, dates;
+        carbs = @Html.Raw(Json.Serialize(Model.Carbs.ToArray()));
+        calories = @Html.Raw(Json.Serialize(Model.Calories.ToArray()));
+        dates = @Html.Raw(Json.Serialize(Model.Dates.ToArray()));
+
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: "Carbs",
+                    data: carbs,
+                    backgroundColor: 'rgba(105, 0, 132, .2)',
+                    borderColor: [
+                        'rgba(200, 99, 132, .7)',
+                    ],
+                    borderWidth: 2
+                },
+
+                {
+                    label: "Calories",
+                    data: calories,
+                    backgroundColor: [
+                        'rgba(0, 137, 132, .2)'
+                    ],
+                    borderColor: [
+                        'rgba(0, 10, 130, .7)'
+                    ],
+                    borderWidth: 2
+
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+    </body>

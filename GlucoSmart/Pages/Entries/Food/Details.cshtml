@@ -1,0 +1,44 @@
+﻿@page
+@model GlucoSmart.Pages.Entries.Food.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FoodEntry</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FoodEntry.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FoodEntry.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FoodEntry.Carbs)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FoodEntry.Carbs)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FoodEntry.Calories)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FoodEntry.Calories)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FoodEntry.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FoodEntry.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.FoodEntry.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

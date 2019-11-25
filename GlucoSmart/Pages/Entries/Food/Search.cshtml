@@ -1,0 +1,68 @@
+﻿@page
+@model GlucoSmart.Pages.Entries.Food.SearchModel
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Search</h1>
+
+<form class="form-inline" method="post">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" asp-for="SearchCriteria.generalSearchInput" placeholder="Search" aria-label="Search" style="margin: 15px;">
+    <input type="submit" value="Search" class="btn btn-primary"/>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Query.Foods[0].Description)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Query != null)
+        {
+            @foreach (var item in Model.Query.Foods)
+            {
+                <tr>
+                    <td>
+                        <a href="/Entries/Food/Create?fdcId=@item.FdcId">@Html.DisplayFor(modelItem => item.Description)</a>
+                    </td>
+                </tr>
+            }
+        }
+        
+        @if (Model.SearchCriteria != null)
+        {
+        <tr>
+            <td>
+                @if (Model.SearchCriteria.pageNumber > 1)
+                {
+                    <form class="form-inline" method="post">
+                        <input class="form-control" asp-for="SearchCriteria.generalSearchInput" value="@Model.Query.FoodSearchCriteria.generalSearchInput" type="hidden">
+                        <input class="form-control" asp-for="SearchCriteria.pageNumber" value="@(Model.Query.CurrentPage - 1)" type="hidden">
+                        <button type="submit" class="btn btn-primary">Prev</button>
+                    </form>
+                }
+</td>
+
+            <td>
+                @if (Model.SearchCriteria.pageNumber != Model.Query.TotalPages)
+                {
+                    <form class="form-inline" method="post">
+                        <input class="form-control" asp-for="SearchCriteria.generalSearchInput" value="@Model.Query.FoodSearchCriteria.generalSearchInput" type="hidden">
+                        <input class="form-control" asp-for="SearchCriteria.pageNumber"value="@(Model.Query.CurrentPage + 1)" type="hidden">
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </form>                
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

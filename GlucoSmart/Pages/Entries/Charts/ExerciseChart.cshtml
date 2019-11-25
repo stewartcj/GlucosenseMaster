@@ -1,0 +1,60 @@
+﻿@page
+@model GlucoSmart.Pages.Entries.Charts.ExerciseChartModel
+@{
+    ViewData["Title"] = "Exercise Chart";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Exercise Chart</h1>
+<body>
+    @if (User.IsInRole("Doctor"))
+    {
+        <a href="/Entries/Glucose/Index?username=@Model.Username">View As Table</a>
+    }
+    @if (User.IsInRole("Patient"))
+    {
+        <a href="/Entries/Glucose/Index">View As Table</a>
+    }
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-10">
+                <canvas id="exerciseChart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="~/js/popper.min.js"></script>
+<script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/mdb.min.js"></script>
+
+<script>
+        var ctxL = document.getElementById("exerciseChart").getContext("2d");
+        var gradientFill = ctxL.createLinearGradient(0, 0, 0, 290)
+        gradientFill.addColorStop(0, "rgba(173, 53, 186, 1)");
+        gradientFill.addColorStop(1, "rgba(173, 53, 186, 0.1)");
+        var entries, dates;
+        entries = @Html.Raw(Json.Serialize(Model.UserEntries.ToArray()));;
+        dates = @Html.Raw(Json.Serialize(Model.Dates.ToArray()));
+
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: "Exercise Entries",
+                    data: entries,
+                    backgroundColor: 'rgba(105, 0, 132, .2)',
+                    borderColor: [
+                        'rgba(200, 99, 132, .7)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+</script>
+
