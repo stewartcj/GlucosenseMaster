@@ -166,3 +166,17 @@ C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Glucose\Details.cshtml.g.cs
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Glucose\Edit.cshtml.g.cs
 C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Glucose\Index.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Charts\ExerciseChart.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Exercise\Create.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Exercise\Delete.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Exercise\Details.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Exercise\Edit.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Exercise\Index.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Create.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Delete.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Details.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Edit.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Index.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Food\Search.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Index.cshtml.g.cs
+C:\Users\cman5\Desktop\Software Engineer I\GlucoSmart\obj\Release\netcoreapp3.0\Razor\Pages\Entries\Charts\FoodChart.cshtml.g.cs

@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using GlucoSmart.Data;
 using GlucoSmart.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GlucoSmart.Pages
 {
+    [Authorize(Roles = "Doctor,Patient")]
     public class GlucoseChartModel : PageModel
     {
         private readonly GlucoSmartDb _context;

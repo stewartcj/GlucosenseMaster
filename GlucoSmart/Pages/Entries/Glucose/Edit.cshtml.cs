@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace GlucoSmart.Pages.Entries.Glucose
 {
-    [Authorize(Roles = "Doctor,Patient")]
+    [Authorize(Roles = "Patient")]
     public class EditModel : PageModel
     {
         private readonly GlucoSmart.Data.GlucoSmartDb _context;

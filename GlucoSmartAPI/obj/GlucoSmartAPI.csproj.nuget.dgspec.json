@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cman5\\Desktop\\GlucoSmartAPI\\GlucoSmartAPI.csproj": {}
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartAPI\\GlucoSmartAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cman5\\Desktop\\GlucoSmartAPI\\GlucoSmartAPI.csproj": {
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartAPI\\GlucoSmartAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cman5\\Desktop\\GlucoSmartAPI\\GlucoSmartAPI.csproj",
+        "projectUniqueName": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartAPI\\GlucoSmartAPI.csproj",
         "projectName": "GlucoSmartAPI",
-        "projectPath": "C:\\Users\\cman5\\Desktop\\GlucoSmartAPI\\GlucoSmartAPI.csproj",
+        "projectPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartAPI\\GlucoSmartAPI.csproj",
         "packagesPath": "C:\\Users\\cman5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cman5\\Desktop\\GlucoSmartAPI\\obj\\",
+        "outputPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

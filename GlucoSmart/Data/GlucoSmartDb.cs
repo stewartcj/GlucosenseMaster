@@ -15,5 +15,7 @@ namespace GlucoSmart.Data
         {
         }
         public DbSet<GlucoSmart.Models.GlucoseEntry> GlucoseEntry { get; set; }
+        public DbSet<GlucoSmart.Models.ExerciseEntry> ExerciseEntry { get; set; }
+        public DbSet<GlucoSmart.Models.FoodEntry> FoodEntry { get; set; }
     }
 }

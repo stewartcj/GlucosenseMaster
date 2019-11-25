@@ -31,6 +31,10 @@ namespace GlucoSmart.Models
         [Required]
 
         public IntensityType Intensity { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; }
         
     }
 }

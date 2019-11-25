@@ -1644,11 +1644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cman5\\Downloads\\GlucoSmart App\\GlucoSmart.csproj",
+      "projectUniqueName": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\GlucoSmart.csproj",
       "projectName": "GlucoSmart",
-      "projectPath": "C:\\Users\\cman5\\Downloads\\GlucoSmart App\\GlucoSmart.csproj",
+      "projectPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\GlucoSmart.csproj",
       "packagesPath": "C:\\Users\\cman5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cman5\\Downloads\\GlucoSmart App\\obj\\",
+      "outputPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmartApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
