@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitRepo\\GlucoSmart\\GlucoSmart.csproj": {}
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj": {}
   },
   "projects": {
-    "C:\\GitRepo\\GlucoSmart\\GlucoSmart.csproj": {
+    "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitRepo\\GlucoSmart\\GlucoSmart.csproj",
+        "projectUniqueName": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj",
         "projectName": "GlucoSmart",
-        "projectPath": "C:\\GitRepo\\GlucoSmart\\GlucoSmart.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\GitRepo\\GlucoSmart\\obj\\",
+        "projectPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\GlucoSmart.csproj",
+        "packagesPath": "C:\\Users\\cman5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cman5\\Desktop\\Software Engineer I\\GlucoSmart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cman5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

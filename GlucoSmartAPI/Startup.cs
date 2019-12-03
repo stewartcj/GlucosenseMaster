@@ -47,7 +47,7 @@ namespace GlucoSmartAPI
             services.AddMvc().AddMvcOptions(options => options
             .EnableEndpointRouting = false);
 
-            
+            services.AddScoped <IApplicationUserRepository, DbApplicationUserRepository>();
 
 
         }

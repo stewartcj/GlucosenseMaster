@@ -25,14 +25,24 @@ namespace GlucoSmart.Pages.Patients
             _userManager = userManager;
         }
 
-        public IList<ApplicationUser> Patients { get; set; }
+        public List<ApplicationUser> Patients { get; set; }
         public ApplicationUser CurrentUser { get; set; }
         public String ErrorMessage { get; set; }
         
         public async Task OnGetAsync()
         {
-            Patients = await _userManager.GetUsersInRoleAsync("Patient");
+            IList<ApplicationUser> patients;
+            Patients = new List<ApplicationUser>();
+            patients = await _userManager.GetUsersInRoleAsync("Patient");
             CurrentUser = await _userManager.GetUserAsync(User);
+
+            foreach(ApplicationUser patient in patients)
+            {
+                if (patient.DoctorID == CurrentUser.DoctorID && patient.DoctorID != "No Doctor Assigned")
+                {
+                    Patients.Add(patient);
+                }
+            }
         }
 
         

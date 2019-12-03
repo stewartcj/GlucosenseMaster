@@ -26,13 +26,13 @@
                             @Html.DisplayNameFor(model => model.UserGluEntries[0].BloodSugar)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.UserGluEntries[0].Date)
-                        </th>
-                        <th>
                             @Html.DisplayNameFor(model => model.UserGluEntries[0].Reading)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.UserGluEntries[0].Meal)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UserGluEntries[0].Date)
                         </th>
                         <th></th>
                     </tr>
@@ -40,20 +40,21 @@
                 <tbody>
                     @foreach (var item in Model.UserGluEntries)
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.BloodSugar)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Date)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Reading)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Meal)
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BloodSugar)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Reading)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Meal)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+
+                    </tr>
                     }
                 </tbody>
             </table>

@@ -20,10 +20,16 @@ namespace GlucoSmartAPI.Controllers
             _userManager = userManager;
         }
 
-        [HttpGet(("{username},{password}"))]
+        [HttpGet("{username},{password}")]
         public async Task<ActionResult<ApplicationUser>> Login(string userName, string password)
         {
             var user = await _userManager.FindByNameAsync(userName);
+            var roles = await _userManager.GetRolesAsync(user);
+
+            if (roles[0] == "Doctor")
+            {
+                return null;
+            }
 
             if (user != null)
             {

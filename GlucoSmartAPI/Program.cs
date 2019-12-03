@@ -21,7 +21,7 @@ namespace GlucoSmartAPI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://10.2.101.183:44383");
+                    //webBuilder.UseUrls("http://10.2.101.183:44383");
                 });
     }
 }

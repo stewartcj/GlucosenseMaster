@@ -14,7 +14,7 @@ namespace GlucoSmart.Pages.Entries.Charts
     public class ExerciseChartModel : PageModel
     {
         private readonly GlucoSmartDb _context;
-        public List<ExerciseEntry> UserEntries { get; set; }
+        public List<int> UserEntries { get; set; }
         public IList<ExerciseEntry> Entries { get; set; }
         public List<string> Dates { get; set; }
         public string Username { get; set; }
@@ -40,7 +40,7 @@ namespace GlucoSmart.Pages.Entries.Charts
         private void PopulateEntries()
         {
             Entries = _context.ExerciseEntry.ToList<ExerciseEntry>();
-            List<ExerciseEntry> userEntries = new List<ExerciseEntry>();
+            List<int> userEntries = new List<int>();
             List<string> dates = new List<string>();
 
             foreach(ExerciseEntry entry in Entries)
@@ -48,7 +48,7 @@ namespace GlucoSmart.Pages.Entries.Charts
                 if (entry.Username == Username)
                 {
                     dates.Add(entry.Date.ToShortDateString());
-                    userEntries.Add(entry);    
+                    userEntries.Add(entry.Minutes);    
                 }
             }
 

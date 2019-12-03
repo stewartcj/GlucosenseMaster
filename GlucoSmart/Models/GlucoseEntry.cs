@@ -28,7 +28,7 @@ namespace GlucoSmart.Models
         public int BloodSugar { get; set; }
 
         [Required]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
         [Required]

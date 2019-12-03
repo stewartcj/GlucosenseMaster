@@ -96,12 +96,17 @@ namespace GlucoSmart.Areas.Identity.Pages.Account
             public DateTime DOB { get; set; }
 
             private string doctorID;
+            
             [Display(Name = "DoctorID")]
             public string DoctorID { 
                 get {
                     return doctorID;
                 }
                 set {
+                    if (Role == Roles.Doctor)
+                    {
+                        
+                    }
                     if (value == null)
                     {
                         doctorID = "No Doctor Assigned";

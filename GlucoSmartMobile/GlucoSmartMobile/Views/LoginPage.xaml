@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.LoginPage"
+             Title="Login">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Register" Clicked="Register_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to" FontFamily="Fantasy" FontSize="Title" HorizontalOptions="Center" />
+            <Label Text="GlucoSmart" FontFamily="Fantasy" FontAttributes="Bold" FontSize="Title" HorizontalOptions="Center" />
+            <Label Text="Please enter a valid login" TextColor="Red" IsVisible="False" x:Name="errorMessage" FontSize="Large"/>
+            <Entry Placeholder="Username" x:Name="username"/>
+            <Entry Placeholder="Password" x:Name="password" IsPassword="True"/>
+            <Button Text="Login" BackgroundColor="#3f76ff" TextColor="#fff" x:Name="loginButton" HorizontalOptions="CenterAndExpand" Clicked="loginButton_Clicked"/>
+            <Button Text="Forgot Password" HorizontalOptions="CenterAndExpand" x:Name="forgotButton" BackgroundColor="#ffffffff" Clicked="forgotButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

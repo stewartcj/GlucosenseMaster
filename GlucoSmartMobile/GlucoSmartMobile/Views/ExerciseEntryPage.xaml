@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.ExerciseEntryPage"
+             Title="New Exercise">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Exercise Types" FontSize="Large" />
+            <Picker Title="Exercise Types" x:Name="ExercisePicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cardio</x:String>
+                        <x:String>Weight Lifting</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Exercise Intensity" FontSize="Large" />
+            <Picker Title="Exercise Intensity" x:Name="IntensityPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Low</x:String>
+                        <x:String>Medium</x:String>
+                        <x:String>High</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="MinutesExercised" FontSize="Large" />
+            <Label HorizontalOptions="Center" x:Name="MinuteLabel" Text="{Binding Source={x:Reference MinuteStepper}, Path=Value}" FontSize="Medium" TextColor="Black" />
+            <Stepper x:Name="MinuteStepper" Value="{Binding Qty}" Maximum="120" Minimum="1" Increment="1" HorizontalOptions="Center" />
+            <Label Text="Date" FontSize="Large" />
+            <DatePicker IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

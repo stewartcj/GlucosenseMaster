@@ -10,5 +10,9 @@ namespace GlucoSmart.Data
             : base(options)
         {
         }
+
+        public DbSet<GlucoseEntry> GlucoseEntry { get; set; }
+        public DbSet<ExerciseEntry> ExerciseEntry { get; set; }
+        public DbSet<FoodEntry> FoodEntry { get; set; }
     }
 }

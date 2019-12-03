@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.RegisterPage"
+             Title="Register">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="errorMessage" Text="Password and Confirm Password must match" FontSize="Large" TextColor="Red" IsVisible="False" />
+                <Entry Keyboard="Plain" Placeholder="First Name" x:Name="firstName" />
+                <Entry Keyboard="Plain" Placeholder="Last Name" x:Name="lastName" />
+                <DatePicker x:Name="dob"/>
+                <Entry Keyboard="Plain" Placeholder="Username" x:Name="username" />
+                <Entry Keyboard="Email" Placeholder="Email" x:Name="email" />
+                <Entry IsPassword="True" Placeholder="Password" x:Name="password" />
+                <Entry IsPassword="True" Placeholder="Confirm Password" x:Name="confirmPassword" />
+                <Entry Keyboard="Telephone" Placeholder="Phone Number" x:Name="phoneNumber" />
+                <Entry Keyboard="Plain" Placeholder="Doctor ID" x:Name="doctorID" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Button Text="Register" x:Name="registerButton" Clicked="registerButton_Clicked" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" />
+                    <Button Text="Clear" x:Name="clearButton" Clicked="clearButton_Clicked" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" />
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

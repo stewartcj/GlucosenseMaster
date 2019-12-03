@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GlucoSmartAPI.Models;
+using GlucoSmart.Data;
 
 namespace GlucoSmartAPI.Controllers
 {
@@ -10,10 +11,12 @@ namespace GlucoSmartAPI.Controllers
     public class RegisterController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        
-        public RegisterController(UserManager<ApplicationUser> userManager)
+        private readonly IApplicationUserRepository _userRepository;
+
+        public RegisterController(UserManager<ApplicationUser> userManager, IApplicationUserRepository userRepository)
         {
             _userManager = userManager;
+            _userRepository = userRepository;
         }
 
         [HttpPost]
@@ -24,7 +27,7 @@ namespace GlucoSmartAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, DOB = model.DOB, Weight = model.Weight, DoctorID = model.DoctorID};
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, DOB = model.DOB, DoctorID = model.DoctorID, PhoneNumber = model.PhoneNumber, Weight = model.Weight};
 
             var result = await _userManager.CreateAsync(user, model.Password);
 
@@ -33,6 +36,7 @@ namespace GlucoSmartAPI.Controllers
                 return BadRequest(result);
             }
 
+            await _userRepository.AssignUserToRoleAsync(model.UserName, "Patient");
             return Ok();
         }
 

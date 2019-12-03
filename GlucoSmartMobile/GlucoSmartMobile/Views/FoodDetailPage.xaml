@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.FoodDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Calories:" FontSize="Large" />
+        <Label Text="{Binding Food.Calories}" d:Text="0" FontSize="Medium"/>
+        <Label Text="Carbs:" FontSize="Large" />
+        <Label Text="{Binding Food.Carbs}" d:Text="Cardio" FontSize="Medium"/>
+        <Label Text="Date:" FontSize="Large" />
+        <Label Text="{Binding Food.Date}" d:Text="01/01/0001" FontSize="Medium"/>
+    </StackLayout>
+    
+</ContentPage>

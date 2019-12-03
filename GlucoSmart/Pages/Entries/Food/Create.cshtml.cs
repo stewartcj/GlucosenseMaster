@@ -68,10 +68,11 @@ namespace GlucoSmart.Pages.Entries.Food
         {
             FoodEntry.Username = User.Identity.Name;
             FoodEntry.Date = DateTime.Now;
+            /*
             if (!ModelState.IsValid)
             {
                 return Page();
-            }
+            }*/
 
             _context.FoodEntry.Add(FoodEntry);
             await _context.SaveChangesAsync();

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.GlucoseEntryPage"
+             Title="New Glucose Reading">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Reading Type" FontSize="Large" />
+            <Picker Title="Reading Type" x:Name="readingPicker" />
+            <Label Text="Meal Type" FontSize="Large" />
+            <Picker Title="Meal Type" x:Name="mealPicker" />
+            <Label Text="Blood Sugar" FontSize="Large" />
+            <Label HorizontalOptions="Center" x:Name="bloodSugarLabel" Text="{Binding Source={x:Reference bloodSugarStepper}, Path=Value}" FontSize="Medium" TextColor="Black" />
+            <Stepper x:Name="bloodSugarStepper" Value="{Binding Qty}" Maximum="200" Minimum="40" Increment="1" HorizontalOptions="Center" />
+            <Label Text="Date" FontSize="Large" />
+            <DatePicker IsEnabled="False" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

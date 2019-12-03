@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.FoodEntryPage"
+             Title="New Item">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Name" FontSize="Large" />
+            <Entry x:Name="FoodNameEntry" Text="" />
+            <Label Text="Carbs" FontSize="Large" />
+            <Entry x:Name="FoodCarbEntry" Keyboard="Numeric" Text=""/>
+            <Label Text="Calories" FontSize="Large" />
+            <Entry x:Name="FoodCalEntry" Keyboard="Numeric" Text="" />
+            <Label Text="Date" FontSize="Large" />
+            <DatePicker IsEnabled="False" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

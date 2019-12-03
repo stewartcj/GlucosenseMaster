@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d"
+             x:Class="GlucoSmartMobile.Views.GlucosePage"
+             Title="Glucose">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Switch x:Name="ChartSwitch" IsToggled="false" Toggled="ChartSwitch_Toggled" HorizontalOptions="End" />
+            <ListView x:Name="GlucoseListView"
+                ItemsSource="{Binding GlucItems}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected">
+                <d:ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>First Item</x:String>
+                        <x:String>Second Item</x:String>
+                        <x:String>Third Item</x:String>
+                        <x:String>Fourth Item</x:String>
+                        <x:String>Fifth Item</x:String>
+                        <x:String>Sixth Item</x:String>
+                    </x:Array>
+                </d:ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Date}" 
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="Pre-Meal Breakfast" x:Name="PreB" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PreBreakfastChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+
+                    <Label Text="Post-Meal Breakfast" x:Name="PostB" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PostBreakfastChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+
+                    <Label Text="Pre-Meal Lunch" x:Name="PreL" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PreLunchChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+
+                    <Label Text="Post-Meal Lunch" x:Name="PostL" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PostLunchChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+
+                    <Label Text="Pre-Meal Dinner" x:Name="PreD" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PreDinnerChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+
+                    <Label Text="Post-Meal Dinner" x:Name="PostD" HorizontalOptions="CenterAndExpand" IsVisible="False" />
+                    <forms:ChartView x:Name="PostDinnerChart" VerticalOptions="FillAndExpand" IsVisible="False" Margin="20" HeightRequest="200" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

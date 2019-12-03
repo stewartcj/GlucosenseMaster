@@ -47,5 +47,10 @@ namespace GlucoSmartAPI.Models
 
         [Display(Name = "DoctorID")]
         public string DoctorID { get; set; }
+
+        [Required]
+        [Display(Name = "Phone Number")]
+        [Phone]
+        public string PhoneNumber { get; set; }
     }
 }
